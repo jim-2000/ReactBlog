@@ -1,10 +1,15 @@
-import logo from './logo.svg';
 import './App.css';
+// built in component 
 
+// my component 
+import Home from './Component/Home';
+
+
+// >>>>>>>>>>>>>>>>>>>>>>>
 function App() {
   return (
     <div className="App">
-    Hello world 
+    <Home />
     </div>
   );
 }
