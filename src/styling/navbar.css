@@ -1,0 +1,48 @@
+.navbar {
+  width: 100%;
+}
+.header {
+  width: 100%;
+  color: white;
+}
+/* .form-inline .form-control {
+  display: inline-block;
+  width: 550px;
+  vertical-align: middle;
+} */
+
+.userName {
+  padding: 5px !important;
+  font-weight: 600;
+  color: #fff !important;
+  text-transform: uppercase !important;
+}
+.userimg {
+  padding: 0 5px;
+  border: 1px solid tomato;
+  height: fit-content;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+.logoutbtn {
+  margin: 0 5px;
+}
+.navitem_c {
+  color: rgb(0, 0, 0) !important;
+  font-weight: 600 !important;
+}
+.mybg {
+  background-color: rgba(27, 26, 27, 0.73) !important;
+}
+.navitem_c:hover {
+  border-bottom: 1px solid tomato !important;
+}
+@media (max-width: 995px) {
+  .form-control {
+    width: 70%;
+  }
+  .logoutbtn {
+    margin-top: 5px;
+  }
+}

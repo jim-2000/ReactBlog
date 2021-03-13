@@ -2,13 +2,14 @@ import React from 'react'
 import  GoogleLogin  from 'react-google-login'
 import { useDispatch, useSelector } from 'react-redux'
 import { selectSignedIn,setUserDate,setSignedIn } from '../features/UserSlice'
+
 //
-import home from '../styling/home.css'
+import '../styling/home.css'
 //>>>>>>>>>>>>>>>>>>
 function Home() {
     const dispatch = useDispatch();
     const login = (response) => {
-        console.log(response)
+      
         dispatch(setSignedIn(true));
         dispatch(setUserDate(response.profileObj));
     }
@@ -16,9 +17,12 @@ function Home() {
 
     return (
         <>
-        <div className="home__page" style={{ display: isSignedIn ? "none": "block" }}>
+        <div className="home__page" style={{ display: isSignedIn ? "none": "" }}>
+         
 {
     !isSignedIn ? (
+    //    <Container> 
+
         <div className="login__message">
         <h2>📗</h2>
             <h1> A Reducer Favourite place!</h1>
@@ -29,27 +33,31 @@ function Home() {
             <button 
             onClick = { renderProps.onClick }
             disabled = { renderProps.disabled}
-            className = "logIn_google btn"
+            className = "logIn_google btn_my"
             >Login with google </button>
         )}
         onSuccess = {login}
         onFailure = {login} 
         isSignedIn ={true}
         cookiePolicy={"single_host_origin"}
-
-
         />
 
         </div>
+        //   </Container>
+       
     ): (
+        // <div className="deselect">
+        //     <h1>Hello</h1>
+        // </div>
         ""
     )
+  
 }
         </div>
         </>
     )
 }
 
-export default Home
+export default Home;
 // 2WK6fb37ZbWGR-yCVZd7H93d
 //345013306597-o6udqujhci826o0ssrm14sgo5me1pqa9.apps.googleusercontent.com
