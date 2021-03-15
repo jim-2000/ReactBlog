@@ -1,0 +1,17 @@
+.footerPart{
+    min-height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0,0,0,0.5);
+    bottom: 0;
+}
+.footer_txt{
+    color: rgb(0, 0, 0);
+    font-weight: 400;
+}
+.contact_dev{
+    color: "#5aff3d";
+text-decoration: none;
+font-weight: 900;
+}

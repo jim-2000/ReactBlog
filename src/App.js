@@ -9,6 +9,7 @@ import Home from './Component/Home';
 import NavbarDisk from './Component/Navbar';
 import Blogs from './Component/Blogs';
 import { selectSignedIn } from './features/UserSlice';
+import Footer from './Component/Footer';
 
 
 // >>>>>>>>>>>>>>>>>>>>>>>
@@ -22,7 +23,7 @@ function App() {
     {
       isSignedIn && <Blogs />
     }
-
+<Footer />
     </div>
   );
 }

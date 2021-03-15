@@ -1,7 +1,7 @@
 import React,{useState,useEffect} from 'react'
 import axios from 'axios'
 import { useDispatch, useSelector } from 'react-redux'
-import { Card, Button,Container,Row,Col } from 'react-bootstrap'
+import { Card, Button,Container,Row ,Col} from 'react-bootstrap'
 
 //
 import { setBlogData ,selectUserInput } from '../features/UserSlice'
@@ -32,20 +32,21 @@ function Blogs() {
 
 
     return (
-       <Container>
+       
             <div className="blogpage">
       
         {
             loading ? <h1 className="loading">Loading ...</h1>: ""
         }
         <div className="blogs" >
-           <Row>
-           {
+         
+                     {
                 blogs?.articles?.map(blog => (
                    <>
             <div className="blogs">
 
            
+             
                 <Card style={{ width: '18rem' }} className="blog_card">
                     <Card.Img variant="top" src={blog.image} />
                     <Card.Body class="blog_body">
@@ -54,16 +55,19 @@ function Blogs() {
                         {blog.description}      
                         </Card.Text>
                         <p className="text-secondary">{blog.publishedAt}</p>
-                        <Button 
-                        className="float-right"
+                       <div className="my_btn">
+                       <Button 
+                        className="float-right my_btn"
                         variant="outline-info" href={blog.url}>{blog.source.name}</Button>
+                       </div>
                     </Card.Body>
                 </Card>
+              
             </div>
                    </>
                 ))
             }
-           </Row>
+         
             {
                 blogs?.totalArticles === 0 && (
                     <h1 className="noblogs">No blogs Available . search some else to read gratest blogs</h1>
@@ -71,7 +75,7 @@ function Blogs() {
             }
         </div>
         </div>
-       </Container>
+    
     )
 }
 

@@ -52,8 +52,8 @@ const FormSubmit =(e)=>{
   <Navbar.Collapse id="basic-navbar-nav">
     <Nav className="mr-auto navbar_my">
       <Nav.Link href="#home" className="navitem_c">Home</Nav.Link>
-      <Nav.Link href="#home" className="navitem_c">Blog</Nav.Link>
-      <Nav.Link href="#home" className="navitem_c">Home</Nav.Link>
+      <Nav.Link href="https://github.com/jim-2000" className="navitem_c">About</Nav.Link>
+      <Nav.Link href="https://www.facebook.com/Exceptional.jim404/" className="navitem_c">Contact</Nav.Link>
      
     
     </Nav>

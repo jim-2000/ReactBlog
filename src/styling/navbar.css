@@ -29,8 +29,9 @@
   margin: 0 5px;
 }
 .navitem_c {
-  color: rgb(0, 0, 0) !important;
+  color: rgb(255, 255, 255) !important;
   font-weight: 600 !important;
+  z-index: 10000;
 }
 .mybg {
   background-color: rgba(27, 26, 27, 0.73) !important;
